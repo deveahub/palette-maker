@@ -45,7 +45,6 @@ const Palette = () => {
         direction="column"
         css={{
           gap: 2,
-          px: 1,
           height: '100%',
         }}
       >
