@@ -1,3 +1,3 @@
-# Seed generator
+# Palette maker
 
-[URL](https://rriosper.github.io/seed-generator/)
+[URL](https://rriosper.github.io/palette-maker/)
