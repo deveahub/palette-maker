@@ -69,7 +69,7 @@ const PopoverButton: FC<PopoverButtonProps> = ({
 }) => (
   <Root modal={false}>
     <StyledTrigger {...triggerProps}>{trigger}</StyledTrigger>
-    <StyledContent portalled={false} {...contentProps}>
+    <StyledContent portalled {...contentProps}>
       {content}
       <StyledArrow />
     </StyledContent>

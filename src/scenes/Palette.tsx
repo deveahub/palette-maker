@@ -55,34 +55,36 @@ const Palette = () => {
             gap: 1,
           }}
         >
-          <PopoverButton
-            trigger={<ChevronDownIcon />}
-            content={
-              <Stack
-                direction="column"
-                css={{
-                  gap: 1,
-                }}
-              >
-                {palettes.data.names
-                  .filter((name) => name !== palettes.data.current.name)
-                  .map((name) => (
-                    <Close
-                      css={{
-                        textAlign: 'left',
-                        color: '$text',
-                        fontWeight: 'bold',
-                      }}
-                      onClick={() =>
-                        palettes.handlers.changeCurrentPalette(name)
-                      }
-                    >
-                      {name}
-                    </Close>
-                  ))}
-              </Stack>
-            }
-          />
+          {palettes.hasMultiplePalettes && (
+            <PopoverButton
+              trigger={<ChevronDownIcon />}
+              content={
+                <Stack
+                  direction="column"
+                  css={{
+                    gap: 1,
+                  }}
+                >
+                  {palettes.data.names
+                    .filter((name) => name !== palettes.data.current.name)
+                    .map((name) => (
+                      <Close
+                        css={{
+                          textAlign: 'left',
+                          color: '$text',
+                          fontWeight: 'bold',
+                        }}
+                        onClick={() =>
+                          palettes.handlers.changeCurrentPalette(name)
+                        }
+                      >
+                        {name}
+                      </Close>
+                    ))}
+                </Stack>
+              }
+            />
+          )}
           <EditableText
             text={palettes.data.current.name}
             onFinishEdit={(value) => palettes.handlers.changePaletteName(value)}
