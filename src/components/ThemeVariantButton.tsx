@@ -1,9 +1,7 @@
 import { Moon as MoonIcon, Sun as SunIcon } from 'react-feather';
 
-import { styled } from '@/styles';
 import useThemeVariant from '@/styles/useThemeVariant';
 
-import Button from './Button';
 import IconButton from './IconButton';
 
 const ThemeVariantButton = () => {

@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, FC, useEffect, useState } from 'react';
 
 import { ComponentProps, styled } from '@/styles';
 
