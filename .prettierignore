@@ -1,0 +1,7 @@
+node_modules
+dist
+mocks
+.prettierrc
+.eslintrc.js
+.next
+_error.js
