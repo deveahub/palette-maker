@@ -29,8 +29,8 @@ const makeThemePartialVariant = (
 
 const makeThemeVariant = (color: Color) => ({
   [color.name]: color.base,
-  ...makeThemePartialVariant(color.name, 'dark', color.variants.slice(0, 3)),
-  ...makeThemePartialVariant(color.name, 'light', color.variants.slice(3, 6)),
+  ...makeThemePartialVariant(color.name, 'dark', color.variants.slice(0, 4)),
+  ...makeThemePartialVariant(color.name, 'light', color.variants.slice(4, 8)),
   [`${color.name}-saturate`]: color.variants[color.variants.length - 2],
   [`${color.name}-desaturate`]: color.variants[color.variants.length - 1],
 });
