@@ -79,14 +79,17 @@ const TopBar = () => {
     <Stack
       justifyContent={{
         '@initial': 'spaceBetween',
-        '@bp1': 'flexStart',
+        '@bp1': 'center',
       }}
+      alignItems="center"
       css={{
+        px: 2,
         zIndex: '$topbar',
         gap: 2,
         position: 'sticky',
         top: 0,
         backgroundColor: '$bg',
+        boxShadow: '0 1px 2px $colors$bg-dark-1',
         py: 1,
       }}
     >

@@ -21,16 +21,7 @@ const globalStyles = globalCss({
     scrollBehavior: 'smooth',
   },
   'div#__next': {
-    display: 'flex',
-    flexDirection: 'column',
     width: '100%',
-    mx: 'auto',
-    px: 1,
-    position: 'relative',
-
-    '@bp15': {
-      maxWidth: '980px',
-    },
   },
   body: {
     backgroundColor: '$bg',
@@ -59,6 +50,18 @@ const globalStyles = globalCss({
   a: {
     textDecoration: 'none',
     color: '$text',
+  },
+  '*::-webkit-scrollbar': {
+    width: '4px',
+    height: '2px',
+  },
+
+  '*::-webkit-scrollbar-track': {
+    backgroundColor: '$bg' /* color of the tracking area */,
+  },
+
+  '*::-webkit-scrollbar-thumb': {
+    backgroundColor: '$text',
   },
 });
 

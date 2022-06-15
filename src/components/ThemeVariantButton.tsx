@@ -15,11 +15,7 @@ const ThemeVariantButton = () => {
         )
       }
     >
-      {themeVariant.themeVariant === 'default' ? (
-        <MoonIcon color="white" />
-      ) : (
-        <SunIcon color="white" />
-      )}
+      {themeVariant.themeVariant === 'default' ? <MoonIcon /> : <SunIcon />}
     </IconButton>
   );
 };

@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { KeyboardEvent, useState } from 'react';
 import {
   ChevronDown as ChevronDownIcon,
-  ChevronUp as ChevronUpIcon,
   Plus as PlusIcon,
 } from 'react-feather';
 
@@ -11,7 +10,6 @@ import EditableText from '@/components/EditableText';
 import IconButton from '@/components/IconButton';
 import Input from '@/components/Input';
 import PopoverButton, { Close } from '@/components/PopoverButton';
-import Select from '@/components/Select';
 import Stack from '@/components/Stack';
 import useToasts from '@/components/Toast/useToasts';
 import { usePalettes } from '@/pods/palette';
@@ -46,17 +44,31 @@ const Palette = () => {
         css={{
           gap: 2,
           height: '100%',
+          maxWidth: 980,
+          mx: 'auto',
         }}
       >
         <Stack
           alignItems="center"
           css={{
+            position: 'sticky',
+            top: 61,
+            backgroundColor: '$bg',
             gap: 1,
+            zIndex: '90',
           }}
         >
           {palettes.hasMultiplePalettes && (
             <PopoverButton
-              trigger={<ChevronDownIcon />}
+              trigger={
+                <Stack
+                  css={{
+                    color: '$text',
+                  }}
+                >
+                  <ChevronDownIcon />
+                </Stack>
+              }
               content={
                 <Stack
                   direction="column"
@@ -91,6 +103,8 @@ const Palette = () => {
               fontSize: '$lg',
               width: '100%',
               px: 0,
+              pt: 2,
+              pb: 1,
             }}
           />
         </Stack>

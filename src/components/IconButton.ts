@@ -10,8 +10,16 @@ const IconButton = styled('button', {
   border: 'none',
   color: 'white',
 
+  '& svg': {
+    color: '$primary-dark-3',
+  },
+
   '&:hover': {
-    backgroundColor: '$primary-dark',
+    backgroundColor: '$primary-dark-3',
+
+    '& svg': {
+      color: '$primary',
+    },
   },
 
   variants: {
