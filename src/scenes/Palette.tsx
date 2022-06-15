@@ -43,7 +43,6 @@ const Palette = () => {
         direction="column"
         css={{
           gap: 2,
-          height: '100%',
           maxWidth: 980,
           mx: 'auto',
         }}
