@@ -89,7 +89,7 @@ const TopBar = () => {
         position: 'sticky',
         top: 0,
         backgroundColor: '$bg',
-        boxShadow: '0 1px 2px $colors$bg-dark-1',
+        boxShadow: '0 1px 2px $colors$bg-dark-0',
         py: 1,
       }}
     >
